@@ -1,0 +1,13 @@
+.Me-picture {
+    padding: 1.4rem 0;
+}
+
+.Me-picture img {
+    border-radius: 15px;
+    filter: brightness(90%);
+    width: 30%;
+}
+
+.Me-text {
+    padding: 0.7rem;
+}
