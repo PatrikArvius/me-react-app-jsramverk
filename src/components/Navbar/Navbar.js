@@ -13,11 +13,11 @@ class Navbar extends Component {
             </div>
             <div className="Route-links">
                 <NavLink exact to="/" activeClassName="selected">Me</NavLink>
-                <div class="dropdown">
-                    <div class="dropdown-title"><NavLink to="/reports" activeClassName="selected">Reports</NavLink></div>
-                    <div class="dropdown-sub">
-                        <div class="dropdown-option"><NavLink exact to="/reports/week/1" activeClassName="selected">Week 1</NavLink></div>
-                        <div class="dropdown-option"><NavLink exact to="/reports/week/2" activeClassName="selected">Week 2</NavLink></div>
+                <div className="dropdown">
+                    <div className="dropdown-title"><NavLink to="/reports" activeClassName="selected">Reports</NavLink></div>
+                    <div className="dropdown-sub">
+                        <div className="dropdown-option"><NavLink exact to="/reports/week/1" activeClassName="selected">Week 1</NavLink></div>
+                        <div className="dropdown-option"><NavLink exact to="/reports/week/2" activeClassName="selected">Week 2</NavLink></div>
                     </div>
                 </div>
             </div>
