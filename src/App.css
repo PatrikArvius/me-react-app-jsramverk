@@ -3,16 +3,16 @@ html {
 }
 
 section {
-    width: 60vw;
+    width: 50vw;
     min-height: 70vh;
-    margin:5vh 20vw;
+    margin:5vh 25vw;
     background: rgba(0, 0, 0, 0.3);
     position: relative;
     color: lightgrey;
 }
 
 section p {
-    width: 70%;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
@@ -55,6 +55,14 @@ p {
     margin-bottom:0.7rem;
 }
 
+label {
+    font-size: 1.4rem;
+}
+
+input {
+    margin-bottom:1.4rem;
+}
+
 .App {
     text-align: center;
 }
@@ -65,4 +73,13 @@ p {
 
 .Markdown-div {
     padding: 0.7rem;
+}
+
+.Section-div {
+    padding: 0.7rem;
+}
+
+.Error-msg {
+    color: rgba(255, 0, 0, 0.596);
+    text-align: center;
 }

@@ -34,6 +34,7 @@ class Report extends Component {
                         });
                     },
                     (error) => {
+                        console.log("Error: " + error);
                         this.setState({
                             id: this.props.match.params.id,
                             isLoaded: true,
@@ -47,7 +48,6 @@ class Report extends Component {
         const {error, md} = this.state;
 
         if (error) {
-            console.log(error);
             return <div>Error {error.message}</div>;
         }
         return (

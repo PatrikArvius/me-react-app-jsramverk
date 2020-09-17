@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import auth from '../../models/auth';
 import logo from './logo.svg';
 import './Navbar.css';
 
 class Navbar extends Component {
+    constructor() {
+        super();
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        auth.clear();
+        this.props.updateUser();
+    }
+
     render() {
+        const user = this.props.user;
         return (
         <nav>
             <div className="React-link-div">
@@ -13,6 +25,9 @@ class Navbar extends Component {
             </div>
             <div className="Route-links">
                 <NavLink exact to="/" activeClassName="selected">Me</NavLink>
+                {user ? <NavLink exact to="/login" activeClassName="selected" onClick={this.handleClick}>Log out</NavLink> : ""}
+                {!user ? <NavLink exact to="/register" activeClassName="selected">Register</NavLink> : ""}
+                {!user ? <NavLink exact to="/login" activeClassName="selected">Log in</NavLink> : ""}
                 <div className="dropdown">
                     <div className="dropdown-title"><NavLink to="/reports" activeClassName="selected">Reports</NavLink></div>
                     <div className="dropdown-sub">
