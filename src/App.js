@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Me from './components/Me/Me';
 import Reports from './components/Reports';
 import Report from './components/Report';
+import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import auth from './models/auth';
@@ -34,6 +35,7 @@ class App extends Component {
                         <Route exact path="/" component={Me} />
                         <Route path="/reports/week/:id" component={Report}/>
                         <Route path="/reports" component={Reports} />
+                        <Route path="/register" component={Register} />
                         <Route path="/login" render={props => <Login updateUser={this.updateUser} {...props} />}/>
                     </Switch>
                     </main>
