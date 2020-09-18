@@ -34,7 +34,6 @@ class Report extends Component {
                         });
                     },
                     (error) => {
-                        console.log("Error: " + error);
                         this.setState({
                             id: this.props.match.params.id,
                             isLoaded: true,

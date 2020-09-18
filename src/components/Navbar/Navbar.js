@@ -17,6 +17,7 @@ class Navbar extends Component {
 
     render() {
         const user = this.props.user;
+        const reports = this.props.reportNumbers
         return (
         <nav>
             <div className="React-link-div">
@@ -31,8 +32,11 @@ class Navbar extends Component {
                 <div className="dropdown">
                     <div className="dropdown-title"><NavLink to="/reports" activeClassName="selected">Reports</NavLink></div>
                     <div className="dropdown-sub">
-                        <div className="dropdown-option"><NavLink exact to="/reports/week/1" activeClassName="selected">Week 1</NavLink></div>
-                        <div className="dropdown-option"><NavLink exact to="/reports/week/2" activeClassName="selected">Week 2</NavLink></div>
+                        {reports.map(report => {
+                            return <div className="dropdown-option" key={report}>
+                                        <NavLink exact to={`/reports/week/${report}`} activeClassName="selected">Week {report}</NavLink>
+                                    </div>
+                        })}
                     </div>
                 </div>
             </div>

@@ -55,6 +55,10 @@ p {
     margin-bottom:0.7rem;
 }
 
+a {
+    outline: 0;
+}
+
 label {
     font-size: 1.4rem;
 }
@@ -72,6 +76,53 @@ input {
 input:focus {
     background-color:#7bddf88f;
     transition: ease-in-out 500ms;
+}
+
+textarea {
+    margin-top: 0.7rem;
+    margin-bottom:1.4rem;
+    width: 60%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.158);
+    border: none;
+    color: lightgrey;
+    font-size: 1.4rem;
+}
+
+table {
+    width: 100%;
+    margin: 0.7rem auto;
+    table-layout: fixed;
+}
+
+th {
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(53, 50, 50)
+}
+
+tr:nth-child(odd) {
+    background-color:rgb(36, 34, 34)
+}
+
+td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th.Week-td {
+    width: 10%;
+}
+
+th.Option-td {
+    width: 10%;
+}
+
+.Num-input {
+    width: 10%;
 }
 
 .Submit-button {
